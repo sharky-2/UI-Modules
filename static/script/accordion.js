@@ -6,7 +6,6 @@ accordion_list.forEach(item => {
         } else {
             accordion_list.forEach(el => el.classList.remove("active"))
             item.classList.add("active")
-        }
-           
+        } 
     })
 })
