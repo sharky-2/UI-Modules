@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+.circle-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+}
+
+.circle-container .orbiting-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin: -40px;
+    animation: rotateOrbit 10s linear infinite;
+}
+
+.circle-container .orbiting-img:nth-child(1) {
+    transform: rotate(0deg) translateX(160px) rotate(0deg);
+    animation-delay: 0s;
+}
+
+.circle-container .orbiting-img:nth-child(2) {
+    transform: rotate(120deg) translateX(160px) rotate(-120deg);
+    animation-delay: -3.3s;
+}
+
+.circle-container .orbiting-img:nth-child(3) {
+    transform: rotate(240deg) translateX(160px) rotate(-240deg);
+    animation-delay: -6.6s;
+}
+
+@keyframes rotateOrbit {
+    0% {
+        transform: rotate(0deg) translateX(160px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(160px) rotate(-360deg);
+    }
+}
